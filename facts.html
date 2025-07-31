@@ -17,50 +17,12 @@
             --blue: #000080;
         }
         
-        /* Navigation */
-        .navbar {
-            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--blue);
-        }
-        
-        .nav-link {
-            color: var(--blue);
-            font-weight: 500;
-            margin: 0 10px;
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--blue);
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
         /* Hero Section */
         .hero-section {
             background: linear-gradient(145deg, var(--saffron) 0%, var(--white) 50%, var(--green) 100%);
             min-height: 100vh;
             position: relative;
             overflow: hidden;
-            padding-top: 80px;
         }
         
         .hero-section::before {
@@ -286,47 +248,6 @@
             color: var(--saffron);
         }
         
-        /* Footer */
-        footer {
-            position: relative;
-            background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
-            color: var(--blue);
-            text-align: center;
-            padding: 3rem 0 1rem;
-            margin-top: 3rem;
-        }
-        
-        .footer-wave {
-            position: absolute;
-            top: -50px;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23f8f9fa" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23f8f9fa" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f8f9fa"/></svg>');
-            background-size: cover;
-        }
-        
-        .footer-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .social-links {
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            color: var(--blue);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--saffron);
-            transform: translateY(-3px);
-        }
-        
         /* Section Titles */
         .section-title {
             color: var(--blue);
@@ -457,40 +378,11 @@
         .delete-btn:hover {
             background-color: rgba(255, 0, 0, 1);
         }
-        
-        /* Scroll padding for fixed nav */
-        body {
-            padding-top: 70px;
-        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">India's 79th Independence</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Indian Heroes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#facts">Amazing Facts</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center" id="home">
+    <section class="hero-section d-flex align-items-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center hero-content">
@@ -638,16 +530,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="about">
-        <div class="footer-wave"></div>
-        <div class="footer-content">
-            <p class="editable" data-type="text">Created with ❤️ for India's 79th Independence Day</p>
-            <p class="editable" data-type="text">By [YOUR NAME, CLASS, SCHOOL NAME]</p>
-           
-        </div>
-    </footer>
-
     <!-- Editor Modal -->
     <div class="modal fade" id="editorModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -749,7 +631,7 @@
             
             // Get relevant CSS rules
             function getRelevantCSS() {
-                const selectors = ['.hero-section', '.flag-btn', '.hero-content', '.editable', '.gallery', '.gallery-item', '.fun-facts', '.fact-card', '.navbar', '.footer'];
+                const selectors = ['.hero-section', '.flag-btn', '.hero-content', '.editable', '.gallery', '.gallery-item', '.fun-facts', '.fact-card'];
                 return Array.from(document.styleSheets)
                     .flatMap(sheet => {
                         try {
@@ -790,13 +672,6 @@
                     const classes = window.currentElement.className.replace('editable', '').trim();
                     
                     htmlEditor.value = `<img src="${src}" alt="${alt}" class="${classes}">`;
-                }
-                else if (window.currentType === 'social') {
-                    const href = window.currentElement.getAttribute('href');
-                    const icon = window.currentElement.querySelector('i').className;
-                    const classes = window.currentElement.className.replace('editable', '').trim();
-                    
-                    htmlEditor.value = `<a href="${href}" class="${classes}"><i class="${icon}"></i></a>`;
                 }
                 
                 cssEditor.value = getRelevantCSS();
@@ -888,36 +763,6 @@
                             window.currentElement.className = `${originalClasses} ${newClasses}`.trim();
                         }
                     }
-                    else if (window.currentType === 'social') {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(htmlEditor.value, 'text/html');
-                        const newLink = doc.body.firstChild;
-                        
-                        if (newLink) {
-                            window.currentElement.href = newLink.href;
-                            
-                            // Update icon if changed
-                            const newIcon = newLink.querySelector('i');
-                            if (newIcon) {
-                                const currentIcon = window.currentElement.querySelector('i');
-                                if (currentIcon) {
-                                    currentIcon.className = newIcon.className;
-                                }
-                            }
-                            
-                            // Preserve original classes
-                            const originalClasses = window.currentElement.className.split(' ').filter(c => 
-                                c === 'editable'
-                            ).join(' ');
-                            
-                            // Get new classes from edited HTML
-                            const newClasses = newLink.className.split(' ').filter(c => 
-                                c !== 'editable'
-                            ).join(' ');
-                            
-                            window.currentElement.className = `${originalClasses} ${newClasses}`.trim();
-                        }
-                    }
                 } catch (e) {
                     console.error("Error saving changes:", e);
                 }
@@ -931,16 +776,6 @@
                 editBtn.innerHTML = window.editMode ? '<i class="fas fa-check"></i>' : '<i class="fas fa-edit"></i>';
                 document.body.style.outline = window.editMode ? '2px dashed rgba(0,0,128,0.2)' : 'none';
             }
-            
-            // Smooth scrolling for navigation
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
             
             // Event Listeners
             saveBtn.addEventListener('click', saveChanges);
